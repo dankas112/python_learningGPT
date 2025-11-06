@@ -6,5 +6,5 @@ def sum_list(user_list):
     else:
         return user_list[0] + sum_list(user_list[1:])
 
-nums = [1, 2, 3, 4, 5]
+nums = [10, 20, 30]
 print("Сумма:", sum_list(nums))
