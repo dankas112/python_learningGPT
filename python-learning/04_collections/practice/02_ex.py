@@ -31,3 +31,50 @@ while True:
         break
     else:
         print('Неверный ввод!')
+        
+# Ошибка:
+
+# td[0] и td[-1] — это id задач, а не количество.
+
+# Если очередь пустая — произойдёт ошибка доступа по индексу.
+
+# ✔ Как правильно:
+
+# Хранить только количество выполненных задач:
+
+# from collections import deque
+
+# td = deque()
+# created = 0
+# done = 0
+
+# print(f'Это симулятор очереди задач!")
+# print("U — создать задачу\nD — выполнить\nE — выход")
+
+# while True:
+#     cmd = input("Что делаем?: ").lower()
+
+#     if cmd == 'u':
+#         created += 1
+#         td.append(created)
+#         print("Создана новая задача!")
+
+#     elif cmd == 'd':
+#         if td:
+#             td.popleft()
+#             done += 1
+#             print("Задача выполнена!")
+#         else:
+#             print("Очередь пуста!")
+
+#     elif cmd == 'e':
+#         print(f"Создано задач: {created}")
+#         print(f"Выполнено задач: {done}")
+#         print(f"Осталось в очереди: {len(td)}")
+#         break
+
+#     else:
+#         print("Неверный ввод!")
+
+
+# Теперь всё корректно работает.
